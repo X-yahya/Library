@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="top">
+            <h2>Page Tracker</h2>
+            <hr>
+            <p class="lib-info">Library Information</p>
+            <hr>
+            <div class="infos">
+                <p>Books: <span class="total">0 </span></p>
+                <p>Completed: <span class="completed">0 </span></p>
+                <p>Total Page: <span class="totalp">0 </span></p>
+            </div>
+        </div>
+        
+        <div class="addsection">
+            <h6>Add Book</h6>
+            <form action="post">
+                <div class="input-group">
+                    <label for="name">Book Name</label>
+                    <input type="text" name="name" id="name" placeholder="Book Name">
+                </div>
+                <div class="input-group">
+                    <label for="author">Author</label>
+                    <input type="text" name="author" id="author" placeholder="Author">
+                </div>
+                <div class="input-group">
+                    <label for="pages">Pages</label>
+                    <input type="number" name="pages" id="pages" placeholder="Number Of Pages">
+                </div>
+                <div class="input-group">
+                    <label for="Status">Status</label>
+                    <select name="status" id="status">
+                        <option value="read">Read</option>
+                        <option value="unread">Unread</option>
+                        <option value="tober">To Read List</option>
+                    </select>
+                </div>
+                <button type="submit" class="add">Add </button>
+            </form>
+            
+            <div class="books-section">
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

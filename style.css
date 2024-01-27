@@ -1,0 +1,121 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-col); 
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-col);
+}
+
+:root {
+    --bg-col: #fffffe;
+    --hd-col: #2b2c34;
+    --card-bg: #d1d1e9;
+    --unr-stat: #e45858;
+    --read-stat: #00ebc7;
+    --tobe-stat: #8bd3dd;
+    
+}
+h2
+{
+    letter-spacing: 1.5px;
+}
+.container {
+    background-color: var(--hd-col);
+    width: 900px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    
+    border-radius: 20px;
+    padding: 20px;
+    color: var(--bg-col);
+}
+.container .top
+{
+    text-align: center;
+    width: 900px;
+}
+.lib-info
+{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+
+    text-align: center;
+}
+.container   .infos
+{
+
+   width: 100%;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}.addsection {
+    /* ... your existing styles ... */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-; /* Center content vertically */
+}
+.addsection h6
+{
+    font-size: 1.3rem;
+    
+    
+}
+.addsection form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-group {
+    width: 45%;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.input-group input:focus {
+    transform: scale(1.1);
+    transition: ease 1.3s;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    background-color: #6246ea;
+    color: var(--bg-col);
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10px; /* Add margin to separate button from input fields */
+}
