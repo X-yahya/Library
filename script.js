@@ -5,7 +5,6 @@ const completed = document.querySelector(".completed") ;
 const totalPage = document.querySelector(".totalp") ; 
 
 
-
 const lib = [] ; 
 class Book
 {
@@ -19,23 +18,33 @@ class Book
     }
 
 }
+function displaybook() {
+    lib.forEach((book) => {
+        const card = document.createElement("div");
+        card.classList.add("book-card");
 
-function displaybook()
-{
-    const card = document.createElement("div") ;
-    const name = document.createElement("p") ;
-    const author = document.createElement("p");
-    const pages = document.createElement("p") ; 
-    const status = document.createElement("p") ;
-    lib.forEach((book)=>{  
-        name.innerHTML = book.name ;
-        author.innerHTML = book.author ; 
-        pages.innerHTML = book.pages ; 
-        status.innerHTML = book.status ; 
-        card.append(name , author , pages,status) ;
-        book_section.appendChild(card); 
-    })
-    
+        const name = document.createElement("p");
+        name.innerHTML = `Title : ${book.name}`;
+
+        const author = document.createElement("p");
+        author.innerHTML = `Author : ${book.author}`;
+
+        const pages = document.createElement("p");
+        pages.innerHTML = `Pages : ${book.pages}`;
+
+        const status = document.createElement("p");
+        status.innerHTML = `${book.status}`;
+        if (book.status === "read") {
+            status.classList.add("read");
+        } else if (book.status === "unread") {
+            status.classList.add("unread");
+        } else {
+            status.classList.add("toberead");
+        }
+
+        card.append(name, author, pages, status);
+        book_section.appendChild(card);
+    });
 }
 
 add.addEventListener("click",()=>
@@ -52,4 +61,3 @@ add.addEventListener("click",()=>
 
     
 })
-

@@ -123,21 +123,66 @@ button {
     font-family: 'Montserrat', sans-serif;
     margin-top: 10px; /* Add margin to separate button from input fields */
 }
-.book-section
-{
-    display: flex;
-    flex-direction: row;
-    
-}
+
 
 .books-section
 {
     width: 900px;
-    height: 50%;
+    height: 30%;
     display: grid;
-    grid-template-columns: 30% 30% 30% ;
+    grid-template-columns: 33% 33% 33% ;
     justify-items: center;
     overflow-y: scroll;
-    
+    background-color: var(--hd-col);
+    margin-top: 20px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border-radius:20px ;
+
+}
+
+.book-card {
+    background-color: var(--bg-col);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.book-card p {
+    margin: 5px 0;
+}
+
+.books-section .book-card:not(:last-child) {
+    margin-right: 10px;
+}
+
+.book-card .status {
+    font-weight: bold;
+}
+
+.book-card .read .unread {
+    color:#e45858;
+    font-weight: bold;
+
+}
+
+.book-card .read {
+    color: var(--read-stat);
+    font-weight: bold;
+
+}
+
+.book-card .toberead {
+    color: var(--tobe-stat);
+    font-weight: bold;
+
+}
+
+.books-section .book-card:not(:last-child) {
+    margin-right: 10px;
+
 
 }
