@@ -26,6 +26,10 @@ h2
 {
     letter-spacing: 1.5px;
 }
+body{
+    display: flex; 
+    flex-direction: column;
+}
 .container {
     background-color: var(--hd-col);
     width: 900px;
@@ -118,4 +122,22 @@ button {
     letter-spacing: 1px;
     font-family: 'Montserrat', sans-serif;
     margin-top: 10px; /* Add margin to separate button from input fields */
+}
+.book-section
+{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.books-section
+{
+    width: 900px;
+    height: 50%;
+    display: grid;
+    grid-template-columns: 30% 30% 30% ;
+    justify-items: center;
+    overflow-y: scroll;
+    
+
 }
