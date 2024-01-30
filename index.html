@@ -21,13 +21,18 @@
                 <p>Total Page: <span class="totalp">0 </span></p>
             </div>
         </div>
-        <dialog id="favDialog">
+        <button type="submit" class="addb">Add </button>
+    </div>
+
+    <div class="books-section"></div>
+
+    <dialog id="favDialog">
         <div class="addsection">
             <h6>Add Book</h6>
-            <form >
+            <form id="addForm">
                 <div class="input-group">
                     <label for="name">Book Name</label>
-                    <input type="text" name="name" id="name" placeholder="Book Name"  required>
+                    <input type="text" name="name" id="name" placeholder="Book Name" required>
                 </div>
                 <div class="input-group">
                     <label for="author">Author</label>
@@ -37,11 +42,10 @@
                     <label for="pages">Pages</label>
                     <input type="number" name="pages" id="pages" placeholder="Number Of Pages" required>
                 </div>
-                <!-- <div class="input-group">
-                    <label for="page-read">Page Read</label>
+                <div class="input-group">
+                    <label for="pread">Pages Read</label>
                     <input type="number" name="pread" id="pread" placeholder="Number Of Pages Read" required>
-
-                </div> -->
+                </div>
                 <div class="input-group" >
                     <label for="status">Status</label>
                     <select name="status" id="status" required>
@@ -54,23 +58,28 @@
             </form>
         </div>
     </dialog>
-    <!-- <dialog id="editBook">
-        <form >
-            <div class="input-group">
-                <label for="npagesEdit">Number Of Pages Read</label>
-                <input type="number" name="numpRead" id="numpRead">
-                <button class="confirm">confirm</button>
-            </div>
-        </form>
-    
-    
-    </dialog> -->
-    <button type="submit" class="addb">Add </button>
-    </div>
-    <div class="books-section">
- 
-                
-    </div>
+
+    <dialog id="editDialog" style="width: 200px;">
+        <div class="edit-section">
+            <h6 class="editBook"></h6>
+            <form id="editForm">
+                <input type="hidden" id="editIndex">
+                <div class="input-group">
+                    <label for="editStatus">Status</label>
+                    <select name="editStatus" id="editStatus" required>
+                        <option value="read" style="color: #00ebc7;font-weight: 700;">Read</option>
+                        <option value="reading" style="color: #e45858;font-weight: 700;">Reading</option>
+                        <option value="to be read" style="color: #8bd3dd ; font-weight: 700;">To Read List</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="nbrpagesread">Pages Read</label>
+                    <input type="number" name="pages-read" id="pages_R">
+                </div>
+                <button class="confirm">Confirm</button>
+            </form>
+        </div>
+    </dialog>
 
 </body>
 </html>

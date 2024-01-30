@@ -170,7 +170,7 @@ button {
     font-weight: 700;
   }
   
-  .book-card .unread {
+  .book-card .reading {
     color: var(--unr-stat);
     font-weight: 700;
   }
