@@ -21,37 +21,43 @@
                 <p>Total Page: <span class="totalp">0 </span></p>
             </div>
         </div>
-        
+        <dialog id="favDialog">
         <div class="addsection">
             <h6>Add Book</h6>
-            <form action="post">
+            <form >
                 <div class="input-group">
                     <label for="name">Book Name</label>
-                    <input type="text" name="name" id="name" placeholder="Book Name">
+                    <input type="text" name="name" id="name" placeholder="Book Name"  required>
                 </div>
                 <div class="input-group">
                     <label for="author">Author</label>
-                    <input type="text" name="author" id="author" placeholder="Author">
+                    <input type="text" name="author" id="author" placeholder="Author" required>
                 </div>
                 <div class="input-group">
                     <label for="pages">Pages</label>
-                    <input type="number" name="pages" id="pages" placeholder="Number Of Pages">
+                    <input type="number" name="pages" id="pages" placeholder="Number Of Pages" required>
                 </div>
                 <div class="input-group">
+                    <label for="page-read">Page Read</label>
+                    <input type="number" name="pread" id="pread" placeholder="Number Of Pages Read" required>
+
+                </div>
+                <div class="input-group" >
                     <label for="status">Status</label>
-                    <select name="status" id="status">
+                    <select name="status" id="status" required>
                         <option value="read" style="color: #00ebc7;font-weight: 700;">Read</option>
                         <option value="unread" style="color: #e45858;font-weight: 700;">Unread</option>
                         <option value="to be read" style="color: #8bd3dd ; font-weight: 700;">To Read List</option>
                     </select>
                 </div>
-                
+                <button class="add">Add </button>
             </form>
-            <button type="submit" class="add">Add </button>
         </div>
+    </dialog>
+    <button type="submit" class="addb">Add </button>
     </div>
     <div class="books-section">
-        
+ 
                 
     </div>
 

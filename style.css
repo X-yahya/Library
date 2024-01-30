@@ -67,11 +67,10 @@ body{
     justify-content: space-between;
     
 }.addsection {
-    /* ... your existing styles ... */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-; /* Center content vertically */
+    justify-content: space-between;
 }
 .addsection h6
 {
@@ -106,7 +105,7 @@ body{
 }
 
 .input-group input:focus {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: ease 1.3s;
 }
 
@@ -139,7 +138,6 @@ button {
     border-radius:20px ;
 
 }
-
 .book-card {
     background-color: var(--bg-col);
     border-radius: 10px;
@@ -150,39 +148,45 @@ button {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    transition: transform 0.3s ease-in-out; 
+  }
+  
+  .book-card:hover {
+    transform: scale(1.01); 
+    transition: ease 0.5s;
+    cursor: pointer;
 }
-.book-card p {
+  
+  .book-card p {
     margin: 5px 0;
-}
-
-.books-section .book-card:not(:last-child) {
-    margin-right: 10px;
-}
-
-.book-card .status {
+  }
+  
+  .book-card .status {
     font-weight: bold;
-}
-
-.book-card .read .unread {
-    color:#e45858;
-    font-weight: bold;
-
-}
-
-.book-card .read {
+  }
+  
+  .book-card .read {
     color: var(--read-stat);
-    font-weight: bold;
-
-}
-
-.book-card .toberead {
+    font-weight: 700;
+  }
+  
+  .book-card .unread {
+    color: var(--unr-stat);
+    font-weight: 700;
+  }
+  
+  .book-card .toberead {
     color: var(--tobe-stat);
-    font-weight: bold;
+    font-weight: 700;
+  }
 
+.name
+{
+    font-weight: 700;
+    font-size: 20px;
+}
+dialog[open]
+{
+    border-radius: 10px ;
 }
 
-.books-section .book-card:not(:last-child) {
-    margin-right: 10px;
-
-
-}
