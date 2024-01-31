@@ -17,6 +17,17 @@ class Book {
     this.status = status;
   }
 }
+
+// function check()
+// {
+//   lib.forEach((book) =>
+//   {
+//     if(book_pages === pages_read)
+//     {
+//       book.status = "read"
+//     }
+//   })
+// }
 function displaybook() {
     book_section.innerHTML = "";
     let total = 0;
@@ -60,6 +71,7 @@ function displaybook() {
         if (book.status === "read") {
       completedBooks++;
     }
+    
      totalPages += Number(book.pages);
   });
 
@@ -99,11 +111,10 @@ function showEditDialog(book) {
     const editIndex = lib.indexOf(book);
     const name = document.querySelector(".editBook");
     name.innerHTML = `${book.name}` ;
-    
-
     document.getElementById("editIndex").value = editIndex;
     document.getElementById("editStatus").value = book.status;
     document.getElementById("pages_R").value = book.pages_read ; 
+
     editDialog.showModal();
 }
 
@@ -111,11 +122,23 @@ editForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const editIndex = parseInt(document.getElementById("editIndex").value, 10);
-    const newStatus = document.getElementById("editStatus").value;
     const newPagesRead = document.getElementById("pages_R").value  ; 
     if (editIndex >= 0 && editIndex < lib.length) {
-        lib[editIndex].status = newStatus;
+        
         lib[editIndex].pages_read = newPagesRead ; 
+        if(newPagesRead === lib[editIndex].pages)
+        {
+          lib[editIndex].status = "read" ; 
+        }
+        else
+        {
+          const newStatus = document.getElementById("editStatus").value;
+          lib[editIndex].status = newStatus ;
+        }
+        
+        
+          
+        
         editDialog.close();
         displaybook();
     }
